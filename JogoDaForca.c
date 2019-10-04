@@ -1,10 +1,10 @@
-﻿#include <stdio.h>
+#include <stdio.h>
 #include <conio.h>
 #include <stdlib.h>
 #include <time.h>
 #include <ctype.h>
-int jogoAtivo=1;
-int vidas=5;
+int jogoAtivo;
+int vidas;
 char palavras[][20]={
 	"CARRO",
 	"FACULDADE",
@@ -15,6 +15,9 @@ char palavras[][20]={
 	"COTONETE",
 	"MELANCIA",
 	"UVA",
+	"ZEBRA",
+	"ABACAXI",
+	"ZOOLOGICO",
 				};
 
 void jogar(char v[],int n);
@@ -74,14 +77,28 @@ void mostrar(char v[]){
 
 int main(void){
 	srand(time(NULL));
-	int n=rand()%9;
-	char sort[t(palavras[n])];
-	int i;
-	for(i=0;i<t(palavras[n]);i++) sort[i]='_';
-	sort[i]='\0';
-	mostrar(sort);
-	jogar(sort,n);
-	_gotoxy(1,10);
-	puts("FIM DE JOGO!");
+	char novoJogo='S';
+	while(novoJogo=='S'){
+		_clrscr();
+		vidas=5;
+		jogoAtivo=1;
+		int n=rand()%12;
+		char sort[t(palavras[n])];
+		int i;
+		for(i=0;i<t(palavras[n]);i++) sort[i]='_';
+		sort[i]='\0';
+		mostrar(sort);
+		jogar(sort,n);
+		_gotoxy(1,10);
+		puts("FIM DE JOGO!");
+		printf("Jogar novamente? S/N\n");
+		scanf("%c%c",&novoJogo);
+		novoJogo=toupper(novoJogo);
+		while(novoJogo!='S' && novoJogo!='N'){
+			puts("INVALIDO\n");
+			scanf("%c%c",&novoJogo);
+			novoJogo=toupper(novoJogo);
+		}
+	}
 	return 0;
 }
