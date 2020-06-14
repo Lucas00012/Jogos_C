@@ -11,7 +11,7 @@ Desenvolvimento de jogos populares utilizando a linguagem C
 * Instale o Pelles C
 link: http://www.smorgasbordet.com/pellesc/
 
-* Abra o arquivo .ppj do jogo que deseja testar
+* Abra o arquivo .ppj do jogo que deseja testar (ou o .exe)
 
 # Review do projeto
 
