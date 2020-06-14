@@ -4,7 +4,7 @@ Desenvolvimento de jogos populares utilizando a linguagem C
 
 * IDE Utilizada - Pelles C
 
-* O projeto possui 3 jogos. Todos NÃO possuem interface gráfica (consoleApp)
+* O projeto possui 3 jogos. obs: todos NÃO possuem interface gráfica (rodam no console)
 
 # Testando o Projeto
 
